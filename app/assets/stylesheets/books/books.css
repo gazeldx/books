@@ -1,4 +1,10 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
+.book_body {
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 16px;
+  line-height: 1.62;
+  margin-top: 10px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  width: 100%;
+  word-wrap: break-word;
+}

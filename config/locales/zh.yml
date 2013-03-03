@@ -1,0 +1,20 @@
+# Sample localization file for Chinese. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+#TODO news should be defined by user，and Model should be changed to defined Chinese.
+zh:
+  books:
+    latest: 新书上架
+    upload: 上传新书
+    
+    title: 书名
+    summary: 简介
+    body: 全文
+    writer: 作者
+    translator: 译者
+    avatar: 照片
+    
+    read: 阅读
+    edit: 编辑
+    destroy: 删除
+    new: 创建新书
+    back: 返回

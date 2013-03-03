@@ -1,0 +1,24 @@
+p#notice
+  = notice
+h1
+  = @book.title
+p
+  b
+    | #{t'books.writer'}:
+  = @book.writer
+  - if @book.translator
+    | &nbsp;#{t'books.translator'}:#{@book.translator}
+p
+  b
+    | #{t'books.summary'}:
+  = @book.summary
+p
+  b
+    | #{t'books.body'}:
+.book_body    
+  = @book.body
+br
+- if session[:id] == @book.user_id
+  = link_to t('books.edit'), edit_book_path(@book)
+  |  | 
+= link_to t('_return'), books_path
