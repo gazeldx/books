@@ -1,9 +1,9 @@
 = semantic_form_for @book do |f|
   = error_msg @book
-  = f.input :title, :label => t('books.title')
+  = f.input :title, :label => t('books.title'), :input_html => { :size => 50 }
   = f.input :writer, :label => t('books.writer')
-  = f.input :summary, :label => t('books.summary'), :input_html => { :rows => 5, :cols => 20 }
-  = f.input :body, :label => t('books.body'), :input_html => { :rows => 20, :cols => 40 }
+  = f.input :summary, :label => t('books.summary'), :input_html => { :rows => 5, :cols => 100 }
+  = f.input :body, :label => t('books.body'), :input_html => { :rows => 20, :cols => 100 }
   /= image_tag(@book.avatar.thumb.url)
   /= f.input :avatar, :as => :file, :label => t('books.avatar')
-  = f.action :submit, :label => t('books.new')
+  = f.action :submit

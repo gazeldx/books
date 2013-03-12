@@ -1,5 +1,4 @@
-h1
-  | Editing book
+h2
+  = t'books.edit'
 = render 'form'
-= link_to t('read'), @book
-= link_to 'Back', books_path
+= link_to t('books.back'), books_path

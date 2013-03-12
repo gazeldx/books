@@ -1,3 +1,9 @@
+= link_to t('_return'), books_path
+- if session[:id] == @book.user_id
+  | &nbsp;&nbsp;
+  = link_to t('books.edit'), edit_book_path(@book)
+  | &nbsp;&nbsp;
+  = link_to t('books.destroy'), @book, method: :delete, data: { confirm: 'Are you sure?' }
 p#notice
   = notice
 h1
@@ -17,8 +23,3 @@ p
     | #{t'books.body'}:
 .book_body    
   = @book.body
-br
-- if session[:id] == @book.user_id
-  = link_to t('books.edit'), edit_book_path(@book)
-  |  | 
-= link_to t('_return'), books_path

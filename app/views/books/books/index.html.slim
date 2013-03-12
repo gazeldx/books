@@ -1,28 +1,23 @@
 h1
   = t'books.latest'
 = link_to '上传新书', new_book_path
-table
+table.table.table-hover
   tr
-    th width='15%'
-      = t'books.title'
     th width='20%'
+      = t'books.title'
+    th width='15%'
       = t'books.writer'
-    th width='50%'
-      = t'books.summary'    
-    th
+    th width='65%'
+      = t'books.summary'
   - @books.each do |book|
     tr
       td
-        = book.title
+        = link_to book.title, book
       td
-        | #{book.writer} #{t'books.translator'} #{book.translator}
+        | #{book.writer[0..18]}
+        - if book.translator
+          |  #{t'books.translator'} #{book.translator}
       td
-        = book.summary[0..200]      
-      td
-        = link_to t('books.read'), book
-        - if session[:id] == book.user_id
-          | &nbsp;&nbsp;
-          = link_to t('books.edit'), edit_book_path(book)
-          | &nbsp;&nbsp;
-          = link_to t('books.destroy'), book, method: :delete, data: { confirm: 'Are you sure?' }
+        span title=book.summary[0..200]
+          | #{book.summary[0..90]}..
 

@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = Books::VERSION
   s.authors     = ["ZhangJian"]
   s.email       = ["zj137@163.com"]
-  s.homepage    = "http://zhangjian.mystory.cc/"
-  s.summary     = "Read and upload e-books. This gem is distributed as Rails mountable engine"
-  s.description = "Read and upload e-books. This gem is distributed as Rails mountable engine"
+  s.homepage    = "http://mystory.cc/books/"
+  s.summary     = "Read and upload e-books. E.g. http://mystory.cc/books/ This gem is distributed as Rails mountable engine."
+  s.description = "Read and upload e-books. E.g. http://mystory.cc/books/ This gem is distributed as Rails mountable engine"
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.md"]
   s.test_files = Dir["test/**/*"]
